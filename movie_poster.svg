@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1600" width="1080" height="1600">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="38%" stop-color="#0a1118"/>
+      <stop offset="100%" stop-color="#030507"/>
+    </linearGradient>
+
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f3f4f6" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#dfe6ef" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#dfe6ef" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="redGlow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#ff1d2d" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ff274a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ff1d2d" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="silv" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#d7dfe7"/>
+      <stop offset="100%" stop-color="#7b8aa0"/>
+    </linearGradient>
+
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1080" height="1600" fill="url(#bg)"/>
+  <rect width="1080" height="1600" fill="#04070b" opacity="0.25"/>
+
+  <!-- moon and glow -->
+  <circle cx="820" cy="235" r="150" fill="url(#moonGlow)" opacity="0.85"/>
+  <circle cx="820" cy="235" r="95" fill="#eef2f8" opacity="0.92"/>
+  <circle cx="820" cy="235" r="66" fill="#dfe6ef" opacity="0.8"/>
+  <path d="M760 260 C790 215, 860 210, 890 250" stroke="#c6d0dc" stroke-width="4" opacity="0.7" fill="none"/>
+
+  <!-- mist -->
+  <ellipse cx="540" cy="620" rx="420" ry="130" fill="#6d7f94" opacity="0.13" filter="url(#blur)"/>
+  <ellipse cx="520" cy="730" rx="560" ry="160" fill="#9aaab8" opacity="0.08" filter="url(#blur)"/>
+
+  <!-- city silhouette -->
+  <g opacity="0.95">
+    <path d="M0 1050 L0 800 L50 800 L50 740 L90 740 L90 810 L130 810 L130 700 L180 700 L180 820 L220 820 L220 760 L280 760 L280 840 L330 840 L330 710 L390 710 L390 860 L445 860 L445 790 L500 790 L500 890 L560 890 L560 730 L610 730 L610 840 L660 840 L660 760 L720 760 L720 860 L780 860 L780 670 L840 670 L840 900 L900 900 L900 780 L960 780 L960 920 L1020 920 L1020 930 L1080 930 L1080 1050 Z" fill="#0b1017"/>
+    <path d="M0 1050 L0 1160 L1080 1160 L1080 1050 Z" fill="#090d13"/>
+  </g>
+
+  <!-- subtle red light / danger -->
+  <rect x="0" y="960" width="1080" height="160" fill="url(#redGlow)" opacity="0.45"/>
+  <path d="M436 920 L540 1020 L530 1160 L385 1160 L385 1010 Z" fill="#d9152f" opacity="0.18"/>
+  <path d="M610 900 L710 990 L700 1160 L560 1160 L560 990 Z" fill="#ff2f42" opacity="0.12"/>
+
+  <!-- central figure silhouette -->
+  <g filter="url(#softShadow)">
+    <path d="M490 970 L555 930 L620 970 L705 1160 L550 1160 L390 1160 L490 970 Z" fill="#0a0e13"/>
+    <path d="M535 820 L670 905 L645 1015 L560 1035 L485 985 L470 905 Z" fill="#121820"/>
+    <path d="M530 755 C640 770, 685 835, 685 900 C685 915, 675 937, 655 948 L600 920 L535 905 L480 935 L445 905 C445 845, 470 770, 530 755 Z" fill="#090d12"/>
+    <circle cx="575" cy="720" r="62" fill="#0b0f14"/>
+  </g>
+
+  <!-- streaks / light -->
+  <path d="M420 1280 L530 1160 L610 1290" stroke="#d91f36" stroke-width="3" opacity="0.6" fill="none"/>
+  <path d="M675 1310 L740 1160 L820 1320" stroke="#da2540" stroke-width="3" opacity="0.55" fill="none"/>
+  <path d="M370 1350 L505 1160" stroke="#ff2d45" stroke-width="2" opacity="0.45" fill="none"/>
+  <path d="M755 1360 L640 1160" stroke="#ff2d45" stroke-width="2" opacity="0.45" fill="none"/>
+
+  <!-- title -->
+  <g filter="url(#softShadow)">
+    <text x="540" y="1185" text-anchor="middle" font-size="116" font-family="Impact, Arial Black, sans-serif" letter-spacing="6" fill="#f2f4f8" opacity="0.96">MIDNIGHT</text>
+    <text x="540" y="1320" text-anchor="middle" font-size="122" font-family="Impact, Arial Black, sans-serif" letter-spacing="6" fill="#e9edf2" opacity="0.96">SILENCE</text>
+  </g>
+
+  <!-- red underline -->
+  <rect x="330" y="1345" width="420" height="6" fill="#ff3146" opacity="0.9"/>
+
+  <!-- tagline -->
+  <text x="540" y="1415" text-anchor="middle" font-size="28" font-family="Verdana, sans-serif" letter-spacing="8" fill="#9aa8b8">EVERY SECRET HAS A SHADOW</text>
+
+  <!-- credits -->
+  <text x="540" y="1495" text-anchor="middle" font-size="22" font-family="Verdana, sans-serif" letter-spacing="6" fill="#79879a">A GHOSTLIGHT FILMS RELEASE</text>
+</svg>
